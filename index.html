@@ -5,22 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>error</title>
     <style>
+        /* CSS to style the entire page and the SVG */
         body {
             background-color: #1a202c; /* Dark background to make the SVG pop */
             display: flex;
+            flex-direction: column; /* Stacks the SVG and button vertically */
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: white;
         }
 
         svg {
             width: 80%;
             max-width: 600px;
             height: auto;
+            margin-bottom: 20px; /* Adds space between SVG and the new button */
         }
 
+        /* New CSS for the "Try again" button */
+        .try-again-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #1a202c;
+            background-color: #FF4E1F; /* A fiery orange color */
+            border: 2px solid #FF4E1F;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .try-again-button:hover {
+            background-color: transparent;
+            color: #FF4E1F;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Existing keyframe animations from the previous version */
         @keyframes blink-fancy {
             0%, 25%, 28.33%, 45%, 48.33%, 51.67%, 93.33%, 96.67% {
                 transform: scaleY(1);
@@ -233,6 +262,7 @@
     </style>
 </head>
 <body>
+    <!-- SVG code to display the animated character and tower -->
     <svg id="500_Bill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-8.5 9.5 560 250">
         <defs>
             <clipPath id="circle-mask">
@@ -369,5 +399,10 @@
             <path id="flame-inner-right" style="-moz-transform-origin: 476.268px 97px;" class="flame-inner" fill="#FFD657" d="M492.1 97L484 77.3 460.4 97z"/>
         </g>
     </svg>
+    
+    <!-- New "Try again" button with a link -->
+    <a href="https://aftkutc.xyz" class="try-again-button">
+        Try again
+    </a>
 </body>
 </html>
